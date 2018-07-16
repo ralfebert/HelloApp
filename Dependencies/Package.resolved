@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "HelloKit",
+        "repositoryURL": "https://github.com/ralfebert/HelloKit.git",
+        "state": {
+          "branch": null,
+          "revision": "479d0ffb8b6c691add4f21c2eecd4639ee9bc3df",
+          "version": "0.1.0"
+        }
+      }
+    ]
+  },
+  "version": 1
+}

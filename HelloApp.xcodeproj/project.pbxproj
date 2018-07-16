@@ -12,7 +12,47 @@
 		BFDA6DCB20FD2BE900F6589E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFDA6DC920FD2BE900F6589E /* Main.storyboard */; };
 		BFDA6DCD20FD2BE900F6589E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BFDA6DCC20FD2BE900F6589E /* Assets.xcassets */; };
 		BFDA6DD020FD2BE900F6589E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFDA6DCE20FD2BE900F6589E /* LaunchScreen.storyboard */; };
+		BFDA6DE320FD2C6400F6589E /* HelloKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFDA6DE120FD2C5700F6589E /* HelloKit.framework */; };
+		BFDA6DE420FD2C6400F6589E /* HelloKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BFDA6DE120FD2C5700F6589E /* HelloKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BFDA6DDE20FD2C5700F6589E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDA6DD720FD2C5600F6589E /* Dependencies.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = "Dependencies::Dependencies::Product";
+			remoteInfo = Dependencies;
+		};
+		BFDA6DE020FD2C5700F6589E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDA6DD720FD2C5600F6589E /* Dependencies.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = "HelloKit::HelloKit::Product";
+			remoteInfo = HelloKit;
+		};
+		BFDA6DE520FD2C6400F6589E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDA6DD720FD2C5600F6589E /* Dependencies.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = "HelloKit::HelloKit";
+			remoteInfo = HelloKit;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		BFDA6DE720FD2C6400F6589E /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				BFDA6DE420FD2C6400F6589E /* HelloKit.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		BFDA6DC220FD2BE900F6589E /* HelloApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HelloApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -22,6 +62,7 @@
 		BFDA6DCC20FD2BE900F6589E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BFDA6DCF20FD2BE900F6589E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BFDA6DD120FD2BE900F6589E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BFDA6DD720FD2C5600F6589E /* Dependencies.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Dependencies.xcodeproj; path = Dependencies/Dependencies.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +70,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BFDA6DE320FD2C6400F6589E /* HelloKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +82,7 @@
 			children = (
 				BFDA6DC420FD2BE900F6589E /* HelloApp */,
 				BFDA6DC320FD2BE900F6589E /* Products */,
+				BFDA6DD720FD2C5600F6589E /* Dependencies.xcodeproj */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,6 +107,15 @@
 			path = HelloApp;
 			sourceTree = "<group>";
 		};
+		BFDA6DD820FD2C5600F6589E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BFDA6DDF20FD2C5700F6589E /* Dependencies.framework */,
+				BFDA6DE120FD2C5700F6589E /* HelloKit.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,10 +126,12 @@
 				BFDA6DBE20FD2BE900F6589E /* Sources */,
 				BFDA6DBF20FD2BE900F6589E /* Frameworks */,
 				BFDA6DC020FD2BE900F6589E /* Resources */,
+				BFDA6DE720FD2C6400F6589E /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				BFDA6DE620FD2C6400F6589E /* PBXTargetDependency */,
 			);
 			name = HelloApp;
 			productName = HelloApp;
@@ -110,12 +164,35 @@
 			mainGroup = BFDA6DB920FD2BE900F6589E;
 			productRefGroup = BFDA6DC320FD2BE900F6589E /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = BFDA6DD820FD2C5600F6589E /* Products */;
+					ProjectRef = BFDA6DD720FD2C5600F6589E /* Dependencies.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				BFDA6DC120FD2BE900F6589E /* HelloApp */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		BFDA6DDF20FD2C5700F6589E /* Dependencies.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Dependencies.framework;
+			remoteRef = BFDA6DDE20FD2C5700F6589E /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		BFDA6DE120FD2C5700F6589E /* HelloKit.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = HelloKit.framework;
+			remoteRef = BFDA6DE020FD2C5700F6589E /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		BFDA6DC020FD2BE900F6589E /* Resources */ = {
@@ -141,6 +218,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BFDA6DE620FD2C6400F6589E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = HelloKit;
+			targetProxy = BFDA6DE520FD2C6400F6589E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		BFDA6DC920FD2BE900F6589E /* Main.storyboard */ = {
@@ -281,6 +366,7 @@
 		BFDA6DD520FD2BE900F6589E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = HelloApp/Info.plist;
@@ -298,6 +384,7 @@
 		BFDA6DD620FD2BE900F6589E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = HelloApp/Info.plist;
